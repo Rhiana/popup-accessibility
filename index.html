@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/modal.css" media="screen">
     <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
     <script src="modal.js"></script>
+    <script src="bootstrap-modal.js"></script>
   </head>
   <body>
     <section class="page-header">
@@ -38,48 +40,48 @@
       </a>
 
       <h3>HTML for modal link</h3>
-      <pre><code>
-        &lt;a href="#dfn_term" id="start_term" class="info-btn" target="_blank"&gt;
-          term
-          &lt;span class="sr-only">opens dialog&lt;/span&gt;
-        &lt;/a&gt;
-      </code></pre>
+<pre><code>
+  &lt;a href="#dfn_term" id="start_term" class="info-btn" target="_blank"&gt;
+    term
+    &lt;span class="sr-only">opens dialog&lt;/span&gt;
+  &lt;/a&gt;
+</code></pre>
 
       <h3>HTML for modal</h3>
       <pre><code>
-        &lt;div id="term" class="modal modal fade"&gt;
-          &lt;div class="modal-dialog"&gt;
-            &lt;div class="modal-content"&gt;
-              &lt;span class="start_dialog sr-only" tabindex="1">Start of dialog&lt;/span&gt;
-              &lt;div class="modal-header"&gt;
-                &lt;h1>Term&lt;/h1&gt;
-                &lt;a  class="modalCloseButton" href="javascript:void(0)" data-dismiss="modal"
-                    title="Close information window" tabindex="2">
-                &lt;i class="fa fa-times">&lt;/i&gt;
-                &lt;span class="sr-only">Select here or press escape to close dialog&lt;/span&gt;
-                &lt;/a&gt;
-              &lt;/div&gt;
-              &lt;div class="modal-body"&gt;
-                &lt;div class="glossary_dfn"&gt;
-                  &lt;dl id="dfn_term"&gt;
-                    &lt;dt>&lt;dfn>Term&lt;/dfn>&lt;/dt&gt;
-                      &lt;dd>Definition goes here&lt;/dd&gt;
-                  &lt;/dl&gt;
-                &lt;/div&gt;
-              &lt;/div&gt;
-              &lt;span class="sr-only" tabindex="3">End of dialog&lt;/span&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
+&lt;div id="term" class="modal modal fade"&gt;
+  &lt;div class="modal-dialog"&gt;
+    &lt;div class="modal-content"&gt;
+      &lt;span class="start_dialog sr-only" tabindex="1">Start of dialog&lt;/span&gt;
+      &lt;div class="modal-header"&gt;
+        &lt;h1>Term&lt;/h1&gt;
+        &lt;a  class="modalCloseButton" href="javascript:void(0)" data-dismiss="modal"
+            title="Close information window" tabindex="2">
+        &lt;i class="fa fa-times">&lt;/i&gt;
+        &lt;span class="sr-only">Select here or press escape to close dialog&lt;/span&gt;
+        &lt;/a&gt;
+      &lt;/div&gt;
+      &lt;div class="modal-body"&gt;
+        &lt;div class="glossary_dfn"&gt;
+          &lt;dl id="dfn_term"&gt;
+            &lt;dt>&lt;dfn>Term&lt;/dfn>&lt;/dt&gt;
+              &lt;dd>Definition goes here&lt;/dd&gt;
+          &lt;/dl&gt;
         &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;span class="sr-only" tabindex="3">End of dialog&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
       </code></pre>
 
       <h3>Javascript to set up modal</h3>
       <pre><code>
-        &lt;script type="text/javascript"&gt;
-        $(function(){
-          modal_set_up("start_term", "term");
-        });
-        &lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+$(function(){
+  modal_set_up("start_term", "term");
+});
+&lt;/script&gt;
       </code></pre>
 
       <div id="term" class="modal modal fade">

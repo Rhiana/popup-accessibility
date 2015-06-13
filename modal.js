@@ -37,7 +37,7 @@ function keyHandeler($obj, evt) {
   // Allow enter and space key for forms and closing modal
   // Disable other key presses
   var keycode = evt.charCode || evt.keyCode;
-  var $focused        = $(':focus')[0];
+  var $focused        = $(':focus')[0]; // focusable added in jquery ui
   var $focusable      = $obj.find(":focusable");
   var $currentFocus   = $.inArray($focused, $focusable);
 
@@ -69,7 +69,7 @@ function mouseHandler($obj) {
 }
 
 function showModal($modelID) {
-  $modelID.modal();
+  $modelID.modal(); //sets up using bootstrap modal code
   mouseHandler($('.modal-backdrop'));
   mouseHandler($modelID);
 

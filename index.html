@@ -34,8 +34,8 @@
         Today we will look at how to make a modal accessible for people who use screen readers. This uses a combination of ARIA attributes and hidden text to speak with the screen reader. As well as helping of JavaScript to help with some custom keyboard control. All while keeping a pleasing look and feel for all users using JavaScript and CSS.
       </p>
 
-      <h3>Demo of modal</h3>
-      Term
+      <h3>Demo of a glossary modal</h3>
+      Modal
       <a href="#dfn_term" id="start_term" class="info-btn" target="_blank">
         <i class="fa fa-question-circle"></i>
         <span class="sr-only">opens dialog</span>
@@ -43,7 +43,7 @@
 
       <h3>HTML for modal link</h3>
 <pre><code>
-Term
+Modal
 &lt;a href="#dfn_term" id="start_term" class="info-btn" target="_blank"&gt;
   &lt;i class="fa fa-question-circle"&gt;&lt;/i&gt;
   &lt;span class="sr-only">opens dialog&lt;/span&gt;
@@ -57,7 +57,7 @@ Term
     &lt;div class="modal-content"&gt;
       &lt;span class="start_dialog sr-only" tabindex="1">Start of dialog&lt;/span&gt;
       &lt;div class="modal-header"&gt;
-        &lt;h1>Term&lt;/h1&gt;
+        &lt;h1&gt;Modal&lt;/h1&gt;
         &lt;a  class="modalCloseButton" href="javascript:void(0)" data-dismiss="modal"
             title="Close information window" tabindex="2"&gt;
         &lt;i class="fa fa-times">&lt;/i&gt;
@@ -67,8 +67,10 @@ Term
       &lt;div class="modal-body"&gt;
         &lt;div class="glossary_dfn"&gt;
           &lt;dl id="dfn_term"&gt;
-            &lt;dt>&lt;dfn>Term&lt;/dfn>&lt;/dt&gt;
-              &lt;dd>Definition goes here&lt;/dd&gt;
+            &lt;dt>&lt;dfn&gt;Modal&lt;/dfn>&lt;/dt&gt;
+              &lt;dd&gt;
+                A modal window is any type of window that is a child (secondary window) to a parent window and usurps the parent's control. It is commonly associated with an Internet Web site pop-up window that stays in front of the original window.  A user may not press any controls or enter any information on the parent window (the original window which opened the modal) until the modal has been closed. A modal window is commonly used when the author wants to retain the user's focus on the information in the modal as it is impossible for the user to interact with the other windows of the same process.
+              &lt;/dd&gt;
           &lt;/dl&gt;
         &lt;/div&gt;
       &lt;/div&gt;
@@ -92,7 +94,7 @@ $(function(){
           <div class="modal-content">
             <span class="start_dialog sr-only" tabindex="1">Start of dialog</span>
             <div class="modal-header">
-              <h1>Term</h1>
+              <h1>Modal</h1>
               <a  class="modalCloseButton" href="javascript:void(0)" data-dismiss="modal"
                   title="Close information window" tabindex="2">
               <i class="fa fa-times"></i>
@@ -102,8 +104,10 @@ $(function(){
             <div class="modal-body">
               <div class="glossary_dfn">
                 <dl id="dfn_term">
-                  <dt><dfn>Term</dfn></dt>
-                    <dd>Definition goes here</dd>
+                  <dt><dfn>Modal</dfn></dt>
+                    <dd>
+                      A modal window is any type of window that is a child (secondary window) to a parent window and usurps the parent's control. It is commonly associated with an Internet Web site pop-up window that stays in front of the original window.  A user may not press any controls or enter any information on the parent window (the original window which opened the modal) until the modal has been closed. A modal window is commonly used when the author wants to retain the user's focus on the information in the modal as it is impossible for the user to interact with the other windows of the same process.
+                    </dd>
                 </dl>
               </div>
             </div>

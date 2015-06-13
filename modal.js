@@ -22,7 +22,7 @@ function modal_set_up(buttonID, modalID) {
 
   // Changes certain keys whilst the modal is open
   $('#' + modalID).on('keydown', function(event) {
-    keyHandeler($(this), event);
+    keyHandler($(this), event);
   });
 
   // Closing the modal closes the modal and resumes tab focus
@@ -31,7 +31,7 @@ function modal_set_up(buttonID, modalID) {
   });
 }
 
-function keyHandeler($obj, evt) {
+function keyHandler($obj, evt) {
   // Close on esc key
   // Key the tab contained to the modal only
   // Allow enter and space key for forms and closing modal

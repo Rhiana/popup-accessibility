@@ -52,15 +52,20 @@ Modal
 
       <h3>HTML for modal</h3>
       <pre><code>
-&lt;div id="term" class="modal modal fade"&gt;
+&lt;div id="term" class="modal modal fade" aria-labelledby="myModalLabel" tabindex="-1" aria-hidden="true" aria-describedby="modal-description"&gt;
   &lt;div class="modal-dialog"&gt;
     &lt;div class="modal-content"&gt;
       &lt;span class="start_dialog sr-only" tabindex="1">Start of dialog&lt;/span&gt;
       &lt;div class="modal-header"&gt;
-        &lt;h1&gt;Modal&lt;/h1&gt;
-        &lt;a  class="modalCloseButton" href="javascript:void(0)" data-dismiss="modal"
-            title="Close information window" tabindex="2"&gt;
-        &lt;i class="fa fa-times">&lt;/i&gt;
+        &lt;h1 id="myModalLabel"&gt;Modal&lt;/h1&gt;
+        &lt;a  class="modalCloseButton"
+            href="javascript:void(0)"
+            data-dismiss="modal"
+            aria-label="close"
+            title="Close information window"
+            tabindex="2"
+        &gt;
+        &lt;i class="fa fa-times" aria-hidden="true">&lt;/i&gt;
         &lt;span class="sr-only"&gt;Select here or press escape to close dialog&lt;/span&gt;
         &lt;/a&gt;
       &lt;/div&gt;
@@ -68,7 +73,7 @@ Modal
         &lt;div class="glossary_dfn"&gt;
           &lt;dl id="dfn_term"&gt;
             &lt;dt>&lt;dfn&gt;Modal&lt;/dfn>&lt;/dt&gt;
-              &lt;dd&gt;
+              &lt;dd id="modal-description"&gt;
                 A modal window is any type of window that is a child (secondary window) to a parent window and usurps the parent's control. It is commonly associated with an Internet Web site pop-up window that stays in front of the original window.  A user may not press any controls or enter any information on the parent window (the original window which opened the modal) until the modal has been closed. A modal window is commonly used when the author wants to retain the user's focus on the information in the modal as it is impossible for the user to interact with the other windows of the same process.
               &lt;/dd&gt;
           &lt;/dl&gt;
@@ -89,15 +94,20 @@ $(function(){
 &lt;/script&gt;
       </code></pre>
 
-      <div id="term" class="modal modal fade">
+      <div id="term" class="modal modal fade" aria-labelledby="myModalLabel" tabindex="-1" aria-hidden="true" aria-describedby="modal-description">
         <div class="modal-dialog">
           <div class="modal-content">
             <span class="start_dialog sr-only" tabindex="1">Start of dialog</span>
             <div class="modal-header">
-              <h1>Modal</h1>
-              <a  class="modalCloseButton" href="javascript:void(0)" data-dismiss="modal"
-                  title="Close information window" tabindex="2">
-              <i class="fa fa-times"></i>
+              <h1 id="myModalLabel">Modal</h1>
+              <a  class="modalCloseButton"
+                  href="javascript:void(0)"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                  title="Close information window"
+                  tabindex="2"
+              >
+              <i class="fa fa-times" aria-hidden="true"></i>
               <span class="sr-only">Select here or press escape to close dialog</span>
               </a>
             </div>
@@ -105,7 +115,7 @@ $(function(){
               <div class="glossary_dfn">
                 <dl id="dfn_term">
                   <dt><dfn>Modal</dfn></dt>
-                    <dd>
+                    <dd id="modal-description">
                       A modal window is any type of window that is a child (secondary window) to a parent window and usurps the parent's control. It is commonly associated with an Internet Web site pop-up window that stays in front of the original window.  A user may not press any controls or enter any information on the parent window (the original window which opened the modal) until the modal has been closed. A modal window is commonly used when the author wants to retain the user's focus on the information in the modal as it is impossible for the user to interact with the other windows of the same process.
                     </dd>
                 </dl>

@@ -111,46 +111,45 @@ $(function(){
       </footer>
 
     </section>
+  </body>
 
-    <div id="term" class="modal modal fade" aria-labelledby="myModalLabel" tabindex="-1" aria-hidden="true" aria-describedby="modal-description">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <span class="start_dialog sr-only" tabindex="1">Start of dialog</span>
-          <div class="modal-header">
-            <h1 id="myModalLabel">Modal</h1>
-            <a  class="modalCloseButton"
-                href="javascript:void(0)"
-                data-dismiss="modal"
-                aria-label="Close"
-                title="Close information window"
-                tabindex="2"
-            >
-            <i class="fa fa-times" aria-hidden="true"></i>
-            <span class="sr-only">Select here or press escape to close dialog</span>
-            </a>
-          </div>
-          <div class="modal-body">
-            <div class="glossary_dfn">
-              <dl id="dfn_term">
-                <dt><dfn>Modal</dfn></dt>
-                  <dd id="modal-description">
-                    A modal window is any type of window that is a child (secondary window) to a parent window and usurps the parent's control. It is commonly associated with an Internet Web site pop-up window that stays in front of the original window.  A user may not press any controls or enter any information on the parent window (the original window which opened the modal) until the modal has been closed. A modal window is commonly used when the author wants to retain the user's focus on the information in the modal as it is impossible for the user to interact with the other windows of the same process.
-                  </dd>
-              </dl>
-            </div>
-          </div>
-          <span class="sr-only" tabindex="3">End of dialog</span>
+  <div id="term" class="modal modal fade" aria-labelledby="myModalLabel" tabindex="-1" aria-hidden="true" aria-describedby="modal-description">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <span class="start_dialog sr-only" tabindex="1">Start of dialog</span>
+        <div class="modal-header">
+          <h1 id="myModalLabel">Modal</h1>
+          <a  class="modalCloseButton"
+              href="javascript:void(0)"
+              data-dismiss="modal"
+              aria-label="Close"
+              title="Close information window"
+              tabindex="2"
+          >
+          <i class="fa fa-times" aria-hidden="true"></i>
+          <span class="sr-only">Select here or press escape to close dialog</span>
+          </a>
         </div>
+        <div class="modal-body">
+          <div class="glossary_dfn">
+            <dl id="dfn_term">
+              <dt><dfn>Modal</dfn></dt>
+                <dd id="modal-description">
+                  A modal window is any type of window that is a child (secondary window) to a parent window and usurps the parent's control. It is commonly associated with an Internet Web site pop-up window that stays in front of the original window.  A user may not press any controls or enter any information on the parent window (the original window which opened the modal) until the modal has been closed. A modal window is commonly used when the author wants to retain the user's focus on the information in the modal as it is impossible for the user to interact with the other windows of the same process.
+                </dd>
+            </dl>
+          </div>
+        </div>
+        <span class="sr-only" tabindex="3">End of dialog</span>
       </div>
     </div>
+  </div>
 
   <script type="text/javascript">
   $(function(){
     modal_set_up("start_term", "term");
   });
   </script>
-
-</body>
 
 </html>
 
